@@ -8,6 +8,12 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
    exit;
 }
 
+/**
+ * CSRF対策のため、トークンを確認します
+ *
+ * @param array|string $data トークンを含むデータ
+ * @return array|string エラーメッセージ
+ */
 function token_checker(array $data)
 {
    $errors = [];
@@ -23,6 +29,12 @@ function token_checker(array $data)
    return $errors;
 }
 
+/**
+ * 送信された問い合わせの妥当性をチェックします
+ *
+ * @param array|string $data お問い合わせデータ
+ * @return array|string エラーメッセージ
+ */
 function validation(array $data)
 {
 
