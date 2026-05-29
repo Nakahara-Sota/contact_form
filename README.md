@@ -9,7 +9,7 @@
 
 <img width="1920" height="1020" alt="Image" src="https://github.com/user-attachments/assets/41bf0c5a-ea36-4767-9614-046ec26654fc" />
 
-*※開発環境(localhost)でのスクリーンショットのため、サイト内ナビゲーションバーに「非暗号化通信」の警告が表示されていますが、仕様によるものです。*
+_※開発環境(localhost)でのスクリーンショットのため、サイト内ナビゲーションバーに「非暗号化通信」の警告が表示されていますが、仕様によるものです。_
 
 本システムでは、ユーザーが迷わず安全に問い合わせを完了できるよう、以下の画面と機能を備えています。
 
@@ -52,12 +52,16 @@
 ## セットアップ手順
 
 1. **ファイルの配置**
-   - 本プロジェクトのファイル群(`index.php`, `style.css` 等)は、すべて `contact_form/php/` フォルダ内に配置してください。
+   - 本プロジェクトのファイル群(`index.php` 等の表舞台ファイル、および裏方ファイルをまとめた `includes/` フォルダ)を、すべて `contact_form/php/` フォルダ内に配置してください。
 
 2. **データベースの作成**
    - XAMPPの「MySQL」を起動し、`init.sql` をインポートしてデータベースを作成します。
 
-3. **ローカル環境(XAMPP)での起動方法**
+3. **環境変数(.env)の作成 【重要】**
+   - プロジェクトのルート(`contact_form/php/` 直下)に `.env` ファイルを新規作成します。
+   - 同階層にある `.env.example` の内容をコピーし、ご自身のローカル環境に合わせてデータベースの接続情報(ユーザー名・パスワード等)を入力してください。
+
+4. **ローカル環境(XAMPP)での起動方法**
    - XAMPP Control Panelを開き、**Apache** と **MySQL** を「Start」にします。
    - ブラウザを開き、以下のURLにアクセスしてください。
      ☞ `http://localhost/contact_form/php/`
@@ -71,4 +75,5 @@
 - **IDE**: Visual Studio Code
 
 ## 外部ライブラリ・API
-* **[YubinBango](https://github.com/yubinbango/yubinbango)** (© yubinbango / MIT License) - 郵便番号からの住所自動入力機能の実装に使用させていただきました。
+
+- **[YubinBango](https://github.com/yubinbango/yubinbango)** (© yubinbango / MIT License) - 郵便番号からの住所自動入力機能の実装に使用させていただきました。
