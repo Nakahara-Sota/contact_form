@@ -67,7 +67,7 @@ try {
    //接続を切断
    $dbh = null;
 } catch (PDOException $e) {
-   exit('データの追加に失敗しました：' . $e->getMessage());
+   exit('データの追加に失敗しました。時間をおいて再度お試しください。');
 }
 //送信がすべて成功したら、トークンを破棄（二重送信防止）
 unset($_SESSION['token']);

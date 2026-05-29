@@ -37,7 +37,7 @@ try {
     //接続を切断
     $dbh = null;
 } catch (PDOException $e) {
-    exit('データの取得に失敗しました：' . $e->getMessage());
+    exit('データの取得に失敗しました。時間をおいて再度お試しください。');
 }
 
 $pref_name = $prefs[$clean['pref']] ?? '県名不明';
