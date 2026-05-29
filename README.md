@@ -69,3 +69,6 @@
 - **Database**: MySQL (MariaDB)
 - **Development Environment**: XAMPP (Apache, MySQL)
 - **IDE**: Visual Studio Code
+
+### 外部ライブラリ・API
+* **[YubinBango](https://github.com)** (© yubinbango / MIT License) - 郵便番号からの住所自動入力機能の実装に使用させていただきました。
